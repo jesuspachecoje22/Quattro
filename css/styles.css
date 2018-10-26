@@ -1,0 +1,90 @@
+
+
+body {
+  font-family: 'Oxygen', 'Helvetica Neue', Arial, sans-serif;
+}
+
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url("../img/header.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+section.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url("../img/services.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+section{
+	padding: 8rem 0;
+ 
+}
+
+h2{
+	font-family: 'Oxygen', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 350%;
+
+}
+.bg-primary {
+  background-color: #FFFF !important;
+}
+
+.nameblue{
+	color: blue;
+
+}
+.shape{
+	border: 2 px;
+	border-style: solid;
+	font-size: 150%;
+
+}
+div.aboutImg{
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px); 
+  background-image: url("../img/about.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.circle{
+	border-radius: 60%;
+	margin: 0.15em;
+	font-size: 4em;
+	}
+
+.fa-arrow-circle-up{
+	background: #4099FF;
+	color: #FFFFFF;
+    padding: 0.3em 0.4em;
+
+}	
+
+.fa-linkedin{
+
+	background: #4099FF;
+	color: #FFFFFF;
+    padding: 0.3em 0.4em;
+
+}
+	
+.fa-facebook{
+	background: #4099FF;
+	color: #FFFFFF;
+    padding: 0.3em 0.55em;
+	}
+
+.fa-phone,
+.fa-envelope,
+.fa-map-marker{
+  color: #4099FF;
+  font-size: 40px;
+
+}
