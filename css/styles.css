@@ -88,3 +88,10 @@ div.aboutImg{
   font-size: 40px;
 
 }
+
+#lname,
+#email,
+#message{
+  background-color: transparent;
+  color: #FFFFFF;
+}

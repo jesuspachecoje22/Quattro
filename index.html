@@ -11,7 +11,8 @@
 	 <!-- Bootstrap CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">}
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css‌​/bootstrap-glyphicon‌​s.css">
 
 </head>
 <body>
@@ -59,7 +60,7 @@
     </header>
 
     <!--Segunda seccion del documento html -->
-    <section class="bg-primary" id="about">
+    <section class="" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 mx-auto text-center">
@@ -166,47 +167,46 @@
          </div>
         </div>
        </div>
-        <div class="container">
-		<div class="row">
+        
+		<div class="container col-lg-8">
 		        <div class="col-md-12">
 		            <div class="well well-sm">
-		                <form class="form-horizontal" method="post">
+		                <form class="form-horizontal" method="post" id="formulario">
 		                    <fieldset>
-		                        <legend class="text-center header">Contact us</legend>
+		                        <legend class="text-center header"></legend>
 
 		                        <div class="form-group">
-		                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-		                            <div class="col-md-8">
-		                                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+		                            <div class="col-md-12">
+		                                <input id="lname" name="name" type="text" placeholder="Your Name" class="form-control">
 		                            </div>
 		                        </div>
 
 		                        <div class="form-group">
-		                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-		                            <div class="col-md-8">
-		                                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+		                            <div class="col-md-12">
+		                                <input id="email" name="email" type="email" placeholder="Your Email" class="form-control" required>
 		                            </div>
 		                        </div>
 		                        
 
 		                        <div class="form-group">
-		                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
-		                            <div class="col-md-8">
-		                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
+		                            <div class="col-md-12 text-center">
+		                                <textarea class="form-control" id="message" name="message" placeholder="Your massage" rows="7"></textarea>
 		                            </div>
 		                        </div>
 
 		                        <div class="form-group">
 		                            <div class="col-md-12 text-center">
-		                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+		                                <button type="submit" class="btn btn-primary btn-lg">
+                                      <span class="glyphicon glyphicon-send"></span>Submit
+                                    </button>
 		                            </div>
 		                        </div>
 		                    </fieldset>
 		                </form>
 		            </div>
 		        </div>
+		    
 		    </div>
-		    </div>>
    
     </section>
 <!-- Librería jQuery requerida por los plugins de JavaScript -->
@@ -218,4 +218,36 @@
  <!-- Compiled and minified Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 </body>
+
+<script type="text/javascript">
+ $("#formulario").submit(function () {
+
+ var labelname = false;
+ var labelcoment = false;
+
+    if($("#lname").val().length < 1)  { 
+        $('#lname').attr('style','border-color: red;');  
+        return false;  
+    }  
+    else
+       labelname = true;
+
+    if ($("#message").val().length < 10) {
+      $('#message').attr('style','border-color: red;');  
+      alert("El campo de comentario debe tener al menos 10 caracteres");
+        return false;  
+    }
+    else
+       labelcoment = true;
+
+
+     if (labelname == true && labelcoment ==true) {
+      alert("Mensaje enviado");
+     }
+
+
+});   
+
+</script>
+
 </html>
